@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# For more information on arrays see:
+# https://www.gnu.org/software/bash/manual/html_node/Arrays.html
+
+# Note: this works on bash >= 4
+# make 'distros' an associative array
+declare -A distros
+
+# Names of Linux Mint versions and its Ubuntu base
+distros=(
+    ['nadia']='quantal'
+    ['olivia']='raring'
+    ['petra']='saucy'
+    ['qiana']='trusty'
+    ['rebecca']='trusty'
+)
+distros["sarah"]="xenial"
+
+distro='sarah'
+echo "Linux Mint name: '$distro'"
+echo "Ubuntu base: '${distros[$distro]}'"
+echo
+echo "keys: ${!distros[@]}"
+echo "values: ${distros[@]}"
+echo
+
+function get_ubuntu_base() {
+    [ ${distros[$1]:+abc} ] && echo ${distros[$1]} || echo "unknown"
+
+    # Parameter substitution note:
+    # ${parameter:+alt_value}
+    # If parameter set, use alt_value, else use null string.
+
+    # For a reference on parameter substitution you can see:
+    # http://tldp.org/LDP/abs/html/parameter-substitution.html
+}
+echo "${distro}'s base is `get_ubuntu_base $distro`"
