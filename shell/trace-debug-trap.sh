@@ -5,7 +5,7 @@ cc_normal=$(tput sgr0)
 cc_yellow=$(tput setaf 3)
 
 # The function used to show debug information
-function trace() {
+trace() {
     # Change this to 1 to show file name.
     # This is useful when you source other scripts and run their code
     show_file_name=0

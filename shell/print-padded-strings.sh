@@ -2,7 +2,7 @@
 
 # You can use this to align output of a script in certain way.
 
-function pad_string() {
+pad_string() {
     line_in=$1
     pad=$2
     line_out=$(printf '%-*.*s' $pad $pad "$line")

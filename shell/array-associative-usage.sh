@@ -30,7 +30,7 @@ echo "keys: ${!distros[@]}"
 echo "values: ${distros[@]}"
 echo
 
-function get_ubuntu_base() {
+get_ubuntu_base() {
     [ ${distros[$1]:+abc} ] && echo ${distros[$1]} || echo "unknown"
 
     # Parameter substitution note:
