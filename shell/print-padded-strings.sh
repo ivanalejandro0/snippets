@@ -3,9 +3,9 @@
 # You can use this to align output of a script in certain way.
 
 pad_string() {
-    line_in=$1
-    pad=$2
-    line_out=$(printf '%-*.*s' $pad $pad "$line")
+    local line_in=$1
+    local pad=$2
+    local line_out=$(printf '%-*.*s' $pad $pad "$line_in")
     echo "$line_out"
 }
 
