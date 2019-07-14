@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # This is meant to be used as a interactive confirmation before doing some
 # action that needs to be carefully considered.
