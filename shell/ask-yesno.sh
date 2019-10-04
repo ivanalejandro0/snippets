@@ -9,8 +9,8 @@
 # On case of "yes", this will return 0, i.e. no error
 # On case of "no", this will return 1, i.e. error
 ask_yesno() {
-    default_message="Continue"
-    message=${1:-$default_message}
+    local default_message="Continue"
+    local message=${1:-$default_message}
     read -n 1 -p "$message (y/N): " Q
     echo
     if [ "$Q" != "y" -a "$Q" != "Y" ]; then
