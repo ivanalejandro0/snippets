@@ -46,3 +46,7 @@ REAL_PATH=$(python -c "import os;print(os.path.realpath('$INVOCATION_PATH'))")
 SCRIPT_DIR=$(dirname "$REAL_PATH")
 echo "Real path:" $REAL_PATH
 echo "Script dir:" $SCRIPT_DIR
+
+# TODO: investigate this alternative:
+# CWD="$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+# https://stackoverflow.com/a/20265752/687989
