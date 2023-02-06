@@ -40,6 +40,12 @@ echo
 # $ brew install coreutils
 # $ greadlink
 
+# https://stackoverflow.com/a/4774063/687989
+# won't work with symlinks for "real" path
+SCRIPTPATH="$( cd -- "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 ; pwd -P )"
+echo "scriptpath:" ${SCRIPTPATH}
+echo
+
 # Or use this alternative (you could use perl as well)
 echo "Using Python:"
 REAL_PATH=$(python -c "import os;print(os.path.realpath('$INVOCATION_PATH'))")
