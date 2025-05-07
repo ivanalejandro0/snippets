@@ -42,3 +42,17 @@ echo "$json_data" | jq '.[] | select(.count > 10)'
 #   "id": "6789",
 #   "count": 30
 # }
+
+
+echo "$json_data" | jq '[.[] | select(.count > 10)]'
+# Output:
+# [
+#   {
+#     "id": "3456",
+#     "count": 20
+#   }
+#   {
+#     "id": "6789",
+#     "count": 30
+#   }
+# ]
