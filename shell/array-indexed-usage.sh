@@ -22,7 +22,7 @@ distros=(
 echo "First value: $distros"
 echo "Second value: ${distros[1]}"
 echo
-echo "All the values, in the same line: ${distros[@]}"
+echo "All the values, in the same line: ${distros[*]}"
 echo
 
 echo "List of values, one per line:"
