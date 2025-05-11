@@ -22,7 +22,7 @@ echo "$header_text"
 
 # Helper function to join the contets of an array using a given separator
 join_array() {
-  local IFS="$1"
+  IFS="$1"
   shift
   echo "$*"
 }
