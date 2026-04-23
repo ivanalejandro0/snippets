@@ -4,7 +4,7 @@
 REQUIRED_MAJOR_VERSION=4
 
 # Multi line with message
-if (( ${BASH_VERSINFO[0]} < REQUIRED_MAJOR_VERSION )); then
+if (( BASH_VERSINFO[0] < REQUIRED_MAJOR_VERSION )); then
     echo "This script needs bash >= $REQUIRED_MAJOR_VERSION"
     exit 1
 fi
