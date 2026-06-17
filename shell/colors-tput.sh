@@ -29,3 +29,4 @@ echo "${red}error${normal}"
 echo "${green}success${normal}"
 
 echo "${green}0.052${normal} ${bold}${green}2,816.00 kb${normal}"
+echo "${green}0.052${normal} ${standout}${green}2,816.00 kb${normal}"

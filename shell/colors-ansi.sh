@@ -2,7 +2,7 @@
 
 # Escape code
 # esc=`echo -en "\e"`
-esc=`echo -en "\033"`
+esc=$(echo -en "\033")
 
 # reset all attributes
 cc_normal="${esc}[0m"
