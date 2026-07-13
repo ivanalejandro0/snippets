@@ -59,8 +59,8 @@ next_element() {
 
 element=${distros[0]}
 while true; do
-    echo $element
+    echo -n $element
     element=$(next_element $element)
 
-    echo "-"; sleep 0.5
+    echo -n ", "; sleep 0.5
 done
